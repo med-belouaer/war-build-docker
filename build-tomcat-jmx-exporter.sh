@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-TOMCAT_VERSION_TAG=7.0
+TOMCAT_VERSION_TAG=8.0
 JMX_AGENT_VERSION=0.3.1
 JMX_AGENT_PORT=8686
 JMX_AGENT_URL="https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/$JMX_AGENT_VERSION/jmx_prometheus_javaagent-$JMX_AGENT_VERSION.jar"
