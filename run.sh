@@ -31,7 +31,7 @@ curl -L -o DockerBuild-$TIME_STRING/tomcat-jmx-exporter.yml $TOMCAT_CONFIG_YAML_
 curl -L -o DockerBuild-$TIME_STRING/jmx_prometheus_javaagent.jar $JMX_AGENT_URL
 
 # Modify Dockerfile
-cp Dockerfile target/hello-world-war-1.0.0.war target/hello-world-war-1.0.0/ DockerBuild-$TIME_STRING
+cp -r Dockerfile target/hello-world-war-1.0.0.war target/hello-world-war-1.0.0/ DockerBuild-$TIME_STRING
 sed -i -e 's#latest#'"$TOMCAT_VERSION_TAG"'#g' DockerBuild-$TIME_STRING/Dockerfile
 
 cd DockerBuild-$TIME_STRING
