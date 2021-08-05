@@ -7,7 +7,6 @@ JMX_AGENT_URL="https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_j
 TOMCAT_CONFIG_YAML_URL="https://raw.githubusercontent.com/prometheus/jmx_exporter/master/example_configs/tomcat.yml"
 
 TIME_STRING=`date +%Y%m%d%H%M%S`
-TEMP_CONTAINER_NAME=tomcat-$TIME_STRING
 
 rm -rf DockerBuild-$TIME_STRING
 mkdir DockerBuild-$TIME_STRING
