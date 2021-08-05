@@ -1,5 +1,7 @@
 FROM tomcat:8
-COPY catalina.sh /usr/local/tomcat/bin/
+
+ENV JAVA_OPTS="$JAVA_OPTS -javaagent:/usr/local/tomcat/jmx_prometheus_javaagent.jar=8686:/usr/local/tomcat/tomcat-jmx-exporter.yml"
+
 COPY tomcat-jmx-exporter.yml /usr/local/tomcat/
 COPY jmx_prometheus_javaagent.jar /usr/local/tomcat/
 
